@@ -98,5 +98,5 @@ foreach ($Group in $DistributionGroups)
 
 Write-Host ""
 Write-Host "==========================================" -ForegroundColor Cyan
-Write-Host " Group creation completed." -ForegroundColor Green
+Write-Host " Security and distribution groups created successfully."
 Write-Host "==========================================" -ForegroundColor Cyan
