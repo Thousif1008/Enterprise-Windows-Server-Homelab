@@ -44,7 +44,7 @@ With both roles installed, the server was ready to be promoted to a domain contr
 
 
 
-![AD DS and DNS Roles Installed](../Screenshots/01%20-%20Server%20Setup/01_AD_DS_DNS_Roles_Installed.png)
+![AD DS and DNS Roles Installed](../Screenshots/01%20-%20Server%20Setup/01_AD_DS_and_DNS_Roles_Installed.png)
 
 
 
