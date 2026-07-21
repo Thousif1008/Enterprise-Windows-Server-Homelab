@@ -45,7 +45,7 @@ The Organizational Units were created using PowerShell to automate the setup and
 ### Active Directory Domain
 
 
-![Active Directory Forest Created](../Screenshots/03%20-%20Active%20Directory/01_Active_Directory_Forest_Created.png)
+![Active Directory Forest Created](../Screenshots/03 - Active Directory/03_Enterprise_OUs_Created_PowerShell.png)
 
 
 The Active Directory Users and Computers console shows the `thousiflab.com` domain after the server was promoted to a domain controller.
@@ -60,7 +60,7 @@ The Active Directory Users and Computers console shows the `thousiflab.com` doma
 
 
 
-![Default Active Directory Structure](../Screenshots/03%20-%20Active%20Directory/02_Default_Active_Directory_Structure.png)
+![Default Active Directory Structure](../Screenshots/03 - Active Directory/03_Enterprise_OUs_Created_PowerShell.png)
 
 
 
