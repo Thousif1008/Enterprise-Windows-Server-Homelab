@@ -1,0 +1,16 @@
+# Logs
+*.log
+
+# PowerShell history
+ConsoleHost_history.txt
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
