@@ -1,8 +1,8 @@
-\# File Server
+# File Server
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -10,37 +10,37 @@ Department folders were created on the server to store shared files for differen
 
 
 
-\---
+---
 
 
 
-\## Configuration
+## Configuration
 
 
 
-\- Created shared folders for IT, HR, and Finance
+- Created shared folders for IT, HR, and Finance
 
-\- Configured NTFS permissions using Security Groups
+- Configured NTFS permissions using Security Groups
 
-\- Verified access for authorized users
+- Verified access for authorized users
 
-\- Verified access was denied for unauthorized users
-
-
-
-\---
+- Verified access was denied for unauthorized users
 
 
 
-\## Screenshots
+---
 
 
 
-\### Department Share Folders
+## Screenshots
 
 
 
-!\[Department Share Folders](../Screenshots/06%20-%20File%20Server/01\_Department\_Share\_Folders.png)
+### Department Share Folders
+
+
+
+![Department Share Folders](../Screenshots/06%20-%20File%20Server/01_Department_Share_Folders.png)
 
 
 
@@ -48,31 +48,31 @@ The department folders created for IT, HR, and Finance are shown on the server.
 
 
 
-\---
+---
 
 
 
-\### NTFS Permissions
+### NTFS Permissions
 
 
 
-!\[NTFS Permissions](../Screenshots/06%20-%20File%20Server/02\_IT\_Folder\_Permissions.png)
+![NTFS Permissions](../Screenshots/06%20-%20File%20Server/02_IT_Folder_Permissions.png)
 
 
 
-The IT folder permissions were configured by granting access to the \*\*GG\_IT\*\* Security Group.
+The IT folder permissions were configured by granting access to the **GG_IT** Security Group.
 
 
 
-\---
+---
 
 
 
-\### Authorized Access
+### Authorized Access
 
 
 
-!\[Authorized Access](../Screenshots/06%20-%20File%20Server/03\_IT\_Share\_Access\_Success.png)
+![Authorized Access](../Screenshots/06%20-%20File%20Server/03_IT_Share_Access_Success.png)
 
 
 
@@ -80,15 +80,15 @@ A user who belongs to the IT Security Group was able to access the shared folder
 
 
 
-\---
+---
 
 
 
-\### Access Denied
+### Access Denied
 
 
 
-!\[Access Denied](../Screenshots/06%20-%20File%20Server/04\_IT\_Share\_Access\_Denied.png)
+![Access Denied](../Screenshots/06%20-%20File%20Server/04_IT_Share_Access_Denied.png)
 
 
 

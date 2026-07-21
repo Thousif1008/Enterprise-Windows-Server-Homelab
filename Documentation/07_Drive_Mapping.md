@@ -1,8 +1,8 @@
-\# Drive Mapping
+# Drive Mapping
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -10,37 +10,37 @@ A Group Policy Preference was configured to map the IT shared folder as a networ
 
 
 
-\---
+---
 
 
 
-\## Configuration
+## Configuration
 
 
 
-\- Configured a Drive Map using Group Policy Preferences
+- Configured a Drive Map using Group Policy Preferences
 
-\- Mapped the IT shared folder to drive \*\*I:\*\*
+- Mapped the IT shared folder to drive **I:**
 
-\- Linked the policy to the appropriate Organizational Unit
-
-
-
-\---
+- Linked the policy to the appropriate Organizational Unit
 
 
 
-\## Screenshot
+---
 
 
 
-\### Drive Mapping Policy
+## Screenshot
 
 
 
-!\[Drive Mapping Policy](../Screenshots/07%20-%20Drive%20Mapping/01\_Drive\_Mapping\_GPO.png)
+### Drive Mapping Policy
 
 
 
-The Drive Map preference was configured to map the `\\\\DC01\\IT` shared folder as drive \*\*I:\*\* for users in the IT Organizational Unit.
+![Drive Mapping Policy](../Screenshots/07%20-%20Drive%20Mapping/01_Drive_Mapping_GPO.png)
+
+
+
+The Drive Map preference was configured to map the `DC01IT` shared folder as drive **I:** for users in the IT Organizational Unit.
 

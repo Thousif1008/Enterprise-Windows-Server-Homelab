@@ -1,8 +1,8 @@
-\# Users and Groups
+# Users and Groups
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -10,39 +10,39 @@ After creating the Organizational Unit structure, user accounts and groups were 
 
 
 
-\---
+---
 
 
 
-\## Configuration
+## Configuration
 
 
 
-\- Created Security Groups
+- Created Security Groups
 
-\- Created Distribution Groups
+- Created Distribution Groups
 
-\- Used PowerShell to create groups
+- Used PowerShell to create groups
 
-\- Imported users from a CSV file using PowerShell
+- Imported users from a CSV file using PowerShell
 
-\- Verified the created users and groups
-
-
-
-\---
+- Verified the created users and groups
 
 
 
-\## Screenshots
+---
 
 
 
-\### Security Groups Created with PowerShell
+## Screenshots
 
 
 
-!\[Security Groups Created with PowerShell](../Screenshots/04%20-%20Users%20and%20Groups/01\_PowerShell\_Create\_Groups.png)
+### Security Groups Created with PowerShell
+
+
+
+![Security Groups Created with PowerShell](../Screenshots/04%20-%20Users%20and%20Groups/01_PowerShell_Create_Groups.png)
 
 
 
@@ -50,15 +50,15 @@ PowerShell was used to create the required Security Groups and Distribution Grou
 
 
 
-\---
+---
 
 
 
-\### Security Groups
+### Security Groups
 
 
 
-!\[Security Groups](../Screenshots/04%20-%20Users%20and%20Groups/02\_Security\_Groups.png)
+![Security Groups](../Screenshots/04%20-%20Users%20and%20Groups/02_Security_Groups.png)
 
 
 
@@ -66,15 +66,15 @@ The Security Groups created for different departments and administrative roles a
 
 
 
-\---
+---
 
 
 
-\### Distribution Groups
+### Distribution Groups
 
 
 
-!\[Distribution Groups](../Screenshots/04%20-%20Users%20and%20Groups/03\_Distribution\_Groups.png)
+![Distribution Groups](../Screenshots/04%20-%20Users%20and%20Groups/03_Distribution_Groups.png)
 
 
 
@@ -82,15 +82,15 @@ The Distribution Groups created for each department are displayed. These groups 
 
 
 
-\---
+---
 
 
 
-\### Bulk User Import
+### Bulk User Import
 
 
 
-!\[Bulk User Import](../Screenshots/04%20-%20Users%20and%20Groups/04\_PowerShell\_Bulk\_User\_Import.png)
+![Bulk User Import](../Screenshots/04%20-%20Users%20and%20Groups/04_PowerShell_Bulk_User_Import.png)
 
 
 
@@ -98,15 +98,15 @@ PowerShell was used to import user accounts from a CSV file. The console shows t
 
 
 
-\---
+---
 
 
 
-\### User Accounts
+### User Accounts
 
 
 
-!\[User Accounts](../Screenshots/04%20-%20Users%20and%20Groups/05\_Users\_Created.png)
+![User Accounts](../Screenshots/04%20-%20Users%20and%20Groups/05_Users_Created.png)
 
 
 

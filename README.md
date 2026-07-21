@@ -1,4 +1,4 @@
-\# Enterprise Windows Server 2022 Active Directory Homelab
+# Enterprise Windows Server 2022 Active Directory Homelab
 
 
 
@@ -6,23 +6,23 @@ A Windows Server 2022 Active Directory homelab built in VMware Workstation Pro w
 
 
 
-\---
+---
 
 
 
-\## Network Topology
+## Network Topology
 
 
 
-!\[Network Topology](Network%20Diagram/Homelab-Network-Topology.png)
+![Network Topology](Network%20Diagram/Homelab-Network-Topology.png)
 
 
 
-\---
+---
 
 
 
-\## Environment
+## Environment
 
 
 
@@ -44,11 +44,11 @@ A Windows Server 2022 Active Directory homelab built in VMware Workstation Pro w
 
 
 
-\---
+---
 
 
 
-\## Project Structure
+## Project Structure
 
 
 
@@ -72,71 +72,71 @@ Enterprise-Windows-Server-Homelab/
 
 
 
-\---
+---
 
 
 
-\## Features
+## Features
 
 
 
-\- Active Directory Domain Services (AD DS)
+- Active Directory Domain Services (AD DS)
 
-\- DNS
+- DNS
 
-\- Organizational Units
+- Organizational Units
 
-\- Security Groups
+- Security Groups
 
-\- Distribution Groups
+- Distribution Groups
 
-\- Bulk user provisioning
+- Bulk user provisioning
 
-\- Group Policy
+- Group Policy
 
-\- File sharing
+- File sharing
 
-\- NTFS permissions
+- NTFS permissions
 
-\- Drive mapping
+- Drive mapping
 
-\- Windows 11 domain join
-
-
-
-\---
+- Windows 11 domain join
 
 
 
-\## Documentation
+---
 
 
 
-\- \[01 - Server Setup](Documentation/01\_Server\_Setup.md)
-
-\- \[02 - Network Configuration](Documentation/02\_Network\_Configuration.md)
-
-\- \[03 - Active Directory](Documentation/03\_Active\_Directory.md)
-
-\- \[04 - Users and Groups](Documentation/04\_Users\_and\_Groups.md)
-
-\- \[05 - Group Policy](Documentation/05\_Group\_Policy.md)
-
-\- \[06 - File Server](Documentation/06\_File\_Server.md)
-
-\- \[07 - Drive Mapping](Documentation/07\_Drive\_Mapping.md)
-
-\- \[08 - Client Testing](Documentation/08\_Client\_Testing.md)
-
-\- \[09 - Conclusion](Documentation/09\_Conclusion.md)
+## Documentation
 
 
 
-\---
+- [01 - Server Setup](Documentation/01_Server_Setup.md)
+
+- [02 - Network Configuration](Documentation/02_Network_Configuration.md)
+
+- [03 - Active Directory](Documentation/03_Active_Directory.md)
+
+- [04 - Users and Groups](Documentation/04_Users_and_Groups.md)
+
+- [05 - Group Policy](Documentation/05_Group_Policy.md)
+
+- [06 - File Server](Documentation/06_File_Server.md)
+
+- [07 - Drive Mapping](Documentation/07_Drive_Mapping.md)
+
+- [08 - Client Testing](Documentation/08_Client_Testing.md)
+
+- [09 - Conclusion](Documentation/09_Conclusion.md)
 
 
 
-\## PowerShell
+---
+
+
+
+## PowerShell
 
 
 
@@ -144,97 +144,97 @@ PowerShell scripts used during the deployment:
 
 
 
-\- Create Organizational Units
+- Create Organizational Units
 
-\- Create Security Groups
+- Create Security Groups
 
-\- Import users from Excel
+- Import users from Excel
 
 
 
-\---
+---
 
 
 
-\## Screenshots
+## Screenshots
 
 
 
-\### Server Manager
+### Server Manager
 
 
 
-!\[Server Manager](Screenshots/01%20-%20Server%20Setup/01\_Server\_Manager.png)
+![Server Manager](Screenshots/01%20-%20Server%20Setup/01_Server_Manager.png)
 
 
 
-\---
+---
 
 
 
-\### Active Directory
+### Active Directory
 
 
 
-!\[Active Directory](Screenshots/03%20-%20Active%20Directory/04\_OU\_Hierarchy.png)
+![Active Directory](Screenshots/03%20-%20Active%20Directory/04_OU_Hierarchy.png)
 
 
 
-\---
+---
 
 
 
-\### Group Policy
+### Group Policy
 
 
 
-!\[Group Policy](Screenshots/05%20-%20Group%20Policy/01\_Group\_Policy\_Management.png)
+![Group Policy](Screenshots/05%20-%20Group%20Policy/01_Group_Policy_Management.png)
 
 
 
-\---
+---
 
 
 
-\### Windows 11 Client
+### Windows 11 Client
 
 
 
-!\[Windows 11 Client](Screenshots/08%20-%20Client%20Testing/02\_Domain\_User\_Login.png)
+![Windows 11 Client](Screenshots/08%20-%20Client%20Testing/02_Domain_User_Login.png)
 
 
 
-\---
+---
 
 
 
-\## Technologies
+## Technologies
 
 
 
-\- VMware Workstation Pro
+- VMware Workstation Pro
 
-\- Windows Server 2022
+- Windows Server 2022
 
-\- Windows 11
+- Windows 11
 
-\- Active Directory Domain Services
+- Active Directory Domain Services
 
-\- DNS
+- DNS
 
-\- Group Policy
+- Group Policy
 
-\- PowerShell
+- PowerShell
 
 
 
-\---
+---
 
 
 
-\## Notes
+## Notes
 
 
 
-The \*\*Documentation\*\* folder contains the complete setup and validation for the project.
+The **Documentation** folder contains the complete setup and validation for the project.
 

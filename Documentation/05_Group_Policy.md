@@ -1,8 +1,8 @@
-\# Group Policy
+# Group Policy
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -10,41 +10,41 @@ Group Policy was used to manage security settings and user restrictions across t
 
 
 
-\---
+---
 
 
 
-\## Configuration
+## Configuration
 
 
 
-\- Created a Baseline Security Policy
+- Created a Baseline Security Policy
 
-\- Configured password and account lockout policies
+- Configured password and account lockout policies
 
-\- Created department-specific Group Policies
+- Created department-specific Group Policies
 
-\- Applied Administrative Template settings
+- Applied Administrative Template settings
 
-\- Updated Group Policy using `gpupdate /force`
+- Updated Group Policy using `gpupdate /force`
 
-\- Verified that the policies were applied successfully
-
-
-
-\---
+- Verified that the policies were applied successfully
 
 
 
-\## Screenshots
+---
 
 
 
-\### Group Policy Management
+## Screenshots
 
 
 
-!\[Group Policy Management](../Screenshots/05%20-%20Group%20Policy/01\_Group\_Policy\_Management.png)
+### Group Policy Management
+
+
+
+![Group Policy Management](../Screenshots/05%20-%20Group%20Policy/01_Group_Policy_Management.png)
 
 
 
@@ -52,15 +52,15 @@ The Group Policy Management console displays the domain and the available Group 
 
 
 
-\---
+---
 
 
 
-\### Baseline Security Policy
+### Baseline Security Policy
 
 
 
-!\[Baseline Security Policy](../Screenshots/05%20-%20Group%20Policy/02\_Baseline\_Security\_Policy.png)
+![Baseline Security Policy](../Screenshots/05%20-%20Group%20Policy/02_Baseline_Security_Policy.png)
 
 
 
@@ -68,15 +68,15 @@ A Baseline Security Policy was created to apply common security settings across 
 
 
 
-\---
+---
 
 
 
-\### Password Policy
+### Password Policy
 
 
 
-!\[Password Policy](../Screenshots/05%20-%20Group%20Policy/03\_Password\_Policy.png)
+![Password Policy](../Screenshots/05%20-%20Group%20Policy/03_Password_Policy.png)
 
 
 
@@ -84,15 +84,15 @@ The password policy was configured to enforce password complexity, password hist
 
 
 
-\---
+---
 
 
 
-\### Account Lockout Policy
+### Account Lockout Policy
 
 
 
-!\[Account Lockout Policy](../Screenshots/05%20-%20Group%20Policy/04\_Account\_Lockout\_Policy.png)
+![Account Lockout Policy](../Screenshots/05%20-%20Group%20Policy/04_Account_Lockout_Policy.png)
 
 
 
@@ -100,15 +100,15 @@ The account lockout policy was configured to lock user accounts after multiple f
 
 
 
-\---
+---
 
 
 
-\### IT Security Policy
+### IT Security Policy
 
 
 
-!\[IT Security Policy](../Screenshots/05%20-%20Group%20Policy/05\_IT\_Security\_Policy\_Linked.png)
+![IT Security Policy](../Screenshots/05%20-%20Group%20Policy/05_IT_Security_Policy_Linked.png)
 
 
 
@@ -116,15 +116,15 @@ The IT Security Policy was linked to the IT Organizational Unit so that it appli
 
 
 
-\---
+---
 
 
 
-\### IT Security Policy Settings
+### IT Security Policy Settings
 
 
 
-!\[IT Security Policy Settings](../Screenshots/05%20-%20Group%20Policy/06\_IT\_Security\_Policy\_Settings.png)
+![IT Security Policy Settings](../Screenshots/05%20-%20Group%20Policy/06_IT_Security_Policy_Settings.png)
 
 
 
@@ -132,15 +132,15 @@ Administrative Template settings were configured to restrict access to tools suc
 
 
 
-\---
+---
 
 
 
-\### Control Panel Policy
+### Control Panel Policy
 
 
 
-!\[Control Panel Policy](../Screenshots/05%20-%20Group%20Policy/07\_Control\_Panel\_Policy.png)
+![Control Panel Policy](../Screenshots/05%20-%20Group%20Policy/07_Control_Panel_Policy.png)
 
 
 
@@ -148,15 +148,15 @@ A policy was configured to prevent users from accessing Control Panel and PC Set
 
 
 
-\---
+---
 
 
 
-\### Group Policy Update
+### Group Policy Update
 
 
 
-!\[Group Policy Update](../Screenshots/05%20-%20Group%20Policy/08\_GPUpdate\_Force.png)
+![Group Policy Update](../Screenshots/05%20-%20Group%20Policy/08_GPUpdate_Force.png)
 
 
 
@@ -164,15 +164,15 @@ A policy was configured to prevent users from accessing Control Panel and PC Set
 
 
 
-\---
+---
 
 
 
-\### HR Department Policy
+### HR Department Policy
 
 
 
-!\[HR Department Policy](../Screenshots/05%20-%20Group%20Policy/09\_HR\_Department\_Policy\_Settings.png)
+![HR Department Policy](../Screenshots/05%20-%20Group%20Policy/09_HR_Department_Policy_Settings.png)
 
 
 
@@ -180,15 +180,15 @@ The HR department policy contains settings that apply only to users in the HR Or
 
 
 
-\---
+---
 
 
 
-\### Finance Department Policy
+### Finance Department Policy
 
 
 
-!\[Finance Department Policy](../Screenshots/05%20-%20Group%20Policy/10\_Finance\_Department\_Policy\_Settings.png)
+![Finance Department Policy](../Screenshots/05%20-%20Group%20Policy/10_Finance_Department_Policy_Settings.png)
 
 
 
@@ -196,15 +196,15 @@ The Finance department policy contains settings that apply only to users in the 
 
 
 
-\---
+---
 
 
 
-\### First Logon Password Change
+### First Logon Password Change
 
 
 
-!\[First Logon Password Change](../Screenshots/05%20-%20Group%20Policy/11\_First\_Logon\_Password\_Reset.png)
+![First Logon Password Change](../Screenshots/05%20-%20Group%20Policy/11_First_Logon_Password_Reset.png)
 
 
 

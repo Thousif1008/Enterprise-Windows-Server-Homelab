@@ -1,8 +1,8 @@
-\# Server Setup
+# Server Setup
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -18,33 +18,33 @@ With both roles installed, the server was ready to be promoted to a domain contr
 
 
 
-\---
+---
 
 
 
-\## Installed Roles
+## Installed Roles
 
 
 
-\- Active Directory Domain Services (AD DS)
+- Active Directory Domain Services (AD DS)
 
-\- DNS Server
-
-
-
-\---
+- DNS Server
 
 
 
-\## Screenshot
+---
 
 
 
-\### AD DS and DNS Roles Installed
+## Screenshot
 
 
 
-!\[AD DS and DNS Roles Installed](../Screenshots/01%20-%20Server%20Setup/01\_AD\_DS\_DNS\_Roles\_Installed.png)
+### AD DS and DNS Roles Installed
+
+
+
+![AD DS and DNS Roles Installed](../Screenshots/01%20-%20Server%20Setup/01_AD_DS_DNS_Roles_Installed.png)
 
 
 

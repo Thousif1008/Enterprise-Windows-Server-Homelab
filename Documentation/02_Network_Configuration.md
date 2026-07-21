@@ -1,8 +1,8 @@
-\# Network Configuration
+# Network Configuration
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -10,37 +10,37 @@ Before configuring Active Directory, the server was configured with a static net
 
 
 
-\---
+---
 
 
 
-\## Configuration
+## Configuration
 
 
 
-\- IPv4 Address: `192.168.1.10`
+- IPv4 Address: `192.168.1.10`
 
-\- Subnet Mask: `255.255.255.0`
+- Subnet Mask: `255.255.255.0`
 
-\- Default Gateway: `192.168.1.1`
+- Default Gateway: `192.168.1.1`
 
-\- Preferred DNS Server: `127.0.0.1`
-
-
-
-\---
+- Preferred DNS Server: `127.0.0.1`
 
 
 
-\## Screenshots
+---
 
 
 
-\### Server IP Configuration
+## Screenshots
 
 
 
-!\[Server IP Configuration](../Screenshots/02%20-%20Network%20Configuration/01\_Server\_IP\_Configuration.png)
+### Server IP Configuration
+
+
+
+![Server IP Configuration](../Screenshots/02%20-%20Network%20Configuration/01_Server_IP_Configuration.png)
 
 
 
@@ -48,15 +48,15 @@ The `ipconfig /all` output verifies the server's network configuration. DHCP is 
 
 
 
-\---
+---
 
 
 
-\### DNS Forward Lookup Zone
+### DNS Forward Lookup Zone
 
 
 
-!\[DNS Forward Lookup Zone](../Screenshots/02%20-%20Network%20Configuration/02\_DNS\_Forward\_Lookup\_Zone.png)
+![DNS Forward Lookup Zone](../Screenshots/02%20-%20Network%20Configuration/02_DNS_Forward_Lookup_Zone.png)
 
 
 
