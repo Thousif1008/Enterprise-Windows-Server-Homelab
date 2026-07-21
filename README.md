@@ -164,8 +164,7 @@ PowerShell scripts used during the deployment:
 
 
 
-![Server Manager](Screenshots/01%20-%20Server%20Setup/01_Server_Manager.png)
-
+![AD DS and DNS Roles Installed](Screenshots/01%20-%20Server%20Setup/01_AD_DS_and_DNS_Roles_Installed.png)
 
 
 ---
@@ -176,8 +175,7 @@ PowerShell scripts used during the deployment:
 
 
 
-![Active Directory](Screenshots/03%20-%20Active%20Directory/04_OU_Hierarchy.png)
-
+![Enterprise OU Structure](Screenshots/03%20-%20Active%20Directory/04_Enterprise_OU_Structure.png)
 
 
 ---
@@ -199,9 +197,7 @@ PowerShell scripts used during the deployment:
 ### Windows 11 Client
 
 
-
-![Windows 11 Client](Screenshots/08%20-%20Client%20Testing/02_Domain_User_Login.png)
-
+![Domain User Login](Screenshots/08%20-%20Client%20Testing/05_Domain_User_Login.png)
 
 
 ---
