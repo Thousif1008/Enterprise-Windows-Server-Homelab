@@ -3,12 +3,25 @@
 Imports users into Active Directory from an Excel spreadsheet.
 
 .DESCRIPTION
-Creates user accounts, assigns groups, managers, and logs the import process.
+Creates user accounts, assigns security groups, managers, and logs the import process.
+
+.AUTHOR
+Mohammed Thousif Raza
+
+.VERSION
+1.0
 #>
 
 #requires -Modules ActiveDirectory,ImportExcel
-Import-Module ActiveDirectory
-Import-Module ImportExcel
+
+try {
+    Import-Module ActiveDirectory -ErrorAction Stop
+    Import-Module ImportExcel -ErrorAction Stop
+}
+catch {
+    Write-Error "Required modules could not be loaded. Ensure ActiveDirectory and ImportExcel are installed."
+    exit
+}
 
 $ExcelPath = ".\ThousifLab_Employees_250_Enterprise.xlsx"
 $LogFile   = ".\ImportUsers.log"
@@ -18,78 +31,92 @@ if (!(Test-Path $ExcelPath)) {
     exit
 }
 
-New-Item -ItemType Directory -Force -Path (Split-Path $LogFile) | Out-Null
+# Create log folder only if needed
+$LogFolder = Split-Path $LogFile
+if ($LogFolder -and $LogFolder -ne "." -and !(Test-Path $LogFolder)) {
+    New-Item -ItemType Directory -Path $LogFolder | Out-Null
+}
 
 function Write-Log {
     param([string]$Message)
     Add-Content $LogFile "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $Message"
 }
 
-$Domain = Get-ADDomain
+$Domain   = Get-ADDomain
 $DomainDN = $Domain.DistinguishedName
-$Users = Import-Excel $ExcelPath
+$Users    = Import-Excel $ExcelPath
 
 $Required = @(
-"EmployeeID","FirstName","LastName","DisplayName","Username",
-"Email","Department","Title","OU","SecurityGroup",
-"Manager","Office","Company","Password","Enabled"
+    "EmployeeID","FirstName","LastName","DisplayName","Username",
+    "Email","Department","Title","OU","SecurityGroup",
+    "Manager","Office","Company","Password","Enabled"
 )
 
-foreach($Col in $Required){
-    if($Users[0].PSObject.Properties.Name -notcontains $Col){
+foreach ($Col in $Required) {
+    if ($Users[0].PSObject.Properties.Name -notcontains $Col) {
         throw "Missing column: $Col"
     }
 }
 
-$Created=0
-$Skipped=0
-$Failed=0
-$Total=$Users.Count
-$Count=0
+$Created = 0
+$Skipped = 0
+$Failed  = 0
+$Total   = $Users.Count
+$Count   = 0
 
-foreach($User in $Users){
+foreach ($User in $Users) {
 
     $Count++
-    Write-Progress -Activity "Importing Users" -Status "$Count of $Total" -PercentComplete (($Count/$Total)*100)
 
-    $TargetOU="$($User.OU),$DomainDN"
+    Write-Progress `
+        -Activity "Importing Users" `
+        -Status "$Count of $Total" `
+        -PercentComplete (($Count / $Total) * 100)
 
-    if(!(Get-ADOrganizationalUnit -LDAPFilter "(distinguishedName=$TargetOU)" -ErrorAction SilentlyContinue)){
+    $TargetOU = "$($User.OU),$DomainDN"
+
+    if (!(Get-ADOrganizationalUnit -LDAPFilter "(distinguishedName=$TargetOU)" -ErrorAction SilentlyContinue)) {
         Write-Host "[OU MISSING] $TargetOU" -ForegroundColor Yellow
         Write-Log "OU Missing: $TargetOU"
         $Failed++
         continue
     }
 
-    if(Get-ADUser -LDAPFilter "(sAMAccountName=$($User.Username))" -ErrorAction SilentlyContinue){
+    if (Get-ADUser -LDAPFilter "(sAMAccountName=$($User.Username))" -ErrorAction SilentlyContinue) {
         Write-Host "[SKIPPED] $($User.Username)" -ForegroundColor Yellow
+        Write-Log "Skipped: $($User.Username)"
         $Skipped++
         continue
     }
 
-    $BaseName=$User.DisplayName
-    if([string]::IsNullOrWhiteSpace($BaseName)){
-        $BaseName="$($User.FirstName) $($User.LastName)"
+    $BaseName = $User.DisplayName
+
+    if ([string]::IsNullOrWhiteSpace($BaseName)) {
+        $BaseName = "$($User.FirstName) $($User.LastName)"
     }
 
-    $UniqueName=$BaseName
-    $Suffix=2
+    $UniqueName = $BaseName
+    $Suffix = 2
 
-    while(Get-ADObject -LDAPFilter "(cn=$UniqueName)" -SearchBase $TargetOU -ErrorAction SilentlyContinue){
-        $UniqueName="$BaseName ($Suffix)"
+    while (Get-ADObject -LDAPFilter "(cn=$UniqueName)" -SearchBase $TargetOU -ErrorAction SilentlyContinue) {
+        $UniqueName = "$BaseName ($Suffix)"
         $Suffix++
     }
 
-    if([string]::IsNullOrWhiteSpace($User.Password)){
-        $Pwd=ConvertTo-SecureString "ChangeMe123!" -AsPlainText -Force
-    } else {
-        $Pwd=ConvertTo-SecureString $User.Password -AsPlainText -Force
+    if ([string]::IsNullOrWhiteSpace($User.Password)) {
+        $Pwd = ConvertTo-SecureString "ChangeMe123!" -AsPlainText -Force
+    }
+    else {
+        $Pwd = ConvertTo-SecureString $User.Password -AsPlainText -Force
     }
 
-    $Enabled=$false
-    if("$($User.Enabled)".ToLower() -eq "true"){$Enabled=$true}
+    $Enabled = $false
 
-    try{
+    if ("$($User.Enabled)".ToLower() -eq "true") {
+        $Enabled = $true
+    }
+
+    try {
 
         New-ADUser `
             -Name $UniqueName `
@@ -108,38 +135,44 @@ foreach($User in $Users){
             -Enabled $Enabled `
             -ChangePasswordAtLogon $true
 
-        if($User.SecurityGroup){
-            try{
+        if ($User.SecurityGroup) {
+            try {
                 Add-ADGroupMember -Identity $User.SecurityGroup -Members $User.Username -ErrorAction Stop
-            }catch{
+            }
+            catch {
                 Write-Log "Group assignment failed for $($User.Username): $_"
             }
         }
 
-        if($User.Manager){
-            try{
-                $Mgr=Get-ADUser -LDAPFilter "(sAMAccountName=$($User.Manager))" -ErrorAction Stop
+        if ($User.Manager) {
+            try {
+                $Mgr = Get-ADUser -LDAPFilter "(sAMAccountName=$($User.Manager))" -ErrorAction Stop
                 Set-ADUser $User.Username -Manager $Mgr.DistinguishedName
-            }catch{
+            }
+            catch {
                 Write-Log "Manager assignment skipped for $($User.Username)"
             }
         }
 
         Write-Host "[CREATED] $($User.Username)" -ForegroundColor Green
-        Write-Log "Created $($User.Username)"
+        Write-Log "Created: $($User.Username)"
         $Created++
     }
-    catch{
+    catch {
         Write-Host "[FAILED] $($User.Username)" -ForegroundColor Red
         Write-Host $_.Exception.Message -ForegroundColor Red
-        Write-Log "Failed $($User.Username): $($_.Exception.Message)"
+        Write-Log "Failed: $($User.Username) - $($_.Exception.Message)"
         $Failed++
     }
 }
 
 Write-Progress -Activity "Importing Users" -Completed
+
 Write-Host ""
-Write-Host "========== SUMMARY ==========" -ForegroundColor Cyan
+Write-Host "========== IMPORT SUMMARY ==========" -ForegroundColor Cyan
+Write-Host "Total   : $Total"
 Write-Host "Created : $Created"
 Write-Host "Skipped : $Skipped"
 Write-Host "Failed  : $Failed"
+Write-Host ""
+Write-Host "User import completed successfully." -ForegroundColor Green
