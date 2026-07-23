@@ -18,13 +18,13 @@ Before configuring Active Directory, the server was configured with a static net
 
 
 
-- IPv4 Address: `192.168.1.10`
+- IPv4 Address: `192.168.29.10`
 
 - Subnet Mask: `255.255.255.0`
 
-- Default Gateway: `192.168.1.1`
+- Default Gateway: `192.168.29.1`
 
-- Preferred DNS Server: `127.0.0.1`
+- Preferred DNS Server: `192.168.29.10`
 
 
 
