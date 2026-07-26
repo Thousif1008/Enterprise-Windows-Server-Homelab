@@ -27,7 +27,6 @@ A Windows Server 2022 Active Directory homelab built in VMware Workstation Pro w
 
 
 | Component | Details |
-
 |-----------|---------|
 
 | Hypervisor | VMware Workstation Pro |
