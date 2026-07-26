@@ -138,17 +138,15 @@ Enterprise-Windows-Server-Homelab/
 
 ## PowerShell
 
+Scripts used to build out the environment:
 
+| Script | Description |
+|---------|-------------|
+| `Create-OUs.ps1` | Creates the OU structure. |
+| `Create-SecurityGroups.ps1` | Creates department security groups. |
+| `Import-EnterpriseUsers-XLSX.ps1` | Imports users from Excel into AD. Supports `-WhatIf` for testing, generates random passwords, and saves a CSV report after each run. |
 
-PowerShell scripts used during the deployment:
-
-
-
-- Create Organizational Units
-
-- Create Security Groups
-
-- Import users from Excel
+**Note:** the import script used to use one fixed password if a row was missing one. Changed it to generate a random password per user instead, since reusing the same password isn't good practice. Also added `-WhatIf` so you can preview what the script will do before it makes any changes.
 
 
 
